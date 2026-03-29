@@ -1,0 +1,73 @@
+import { LyricLine } from './types';
+
+// Synced lyrics for demo tracks (times in seconds)
+export const trackLyrics: Record<string, LyricLine[]> = {
+  t1: [
+    { time: 0, text: '♪ Instrumental intro ♪' },
+    { time: 12, text: 'Run until the skyline glows' },
+    { time: 18, text: 'Keep the signal in your bones' },
+    { time: 24, text: 'Every heartbeat finds the tempo' },
+    { time: 30, text: 'On and on the current flows' },
+    { time: 38, text: '' },
+    { time: 40, text: 'We are the orbit runners' },
+    { time: 46, text: 'Chasing light through wires' },
+    { time: 52, text: 'Burning through the static' },
+    { time: 58, text: 'Higher and higher' },
+    { time: 66, text: '' },
+    { time: 68, text: 'Lost in the frequency' },
+    { time: 74, text: 'Dancing with the noise' },
+    { time: 80, text: 'Every wave a heartbeat' },
+    { time: 86, text: 'Every pulse a choice' },
+    { time: 94, text: '' },
+    { time: 96, text: 'Run until the skyline glows' },
+    { time: 102, text: 'Keep the signal in your bones' },
+    { time: 108, text: 'Every heartbeat finds the tempo' },
+    { time: 114, text: 'On and on the current flows' },
+    { time: 122, text: '' },
+    { time: 124, text: 'Neon dreams in midnight air' },
+    { time: 130, text: 'Electric pulses everywhere' },
+    { time: 136, text: 'We ride the wave together' },
+    { time: 142, text: 'Nothing else can compare' },
+    { time: 150, text: '' },
+    { time: 152, text: 'On and on...' },
+    { time: 160, text: 'The current flows...' },
+    { time: 170, text: '♪ Outro ♪' },
+  ],
+  t2: [
+    { time: 0, text: '♪ Engine revving ♪' },
+    { time: 8, text: 'Midnight chrome reflections' },
+    { time: 14, text: 'On the boulevard of dreams' },
+    { time: 20, text: 'Headlights paint the darkness' },
+    { time: 26, text: 'Nothing\'s what it seems' },
+    { time: 34, text: '' },
+    { time: 36, text: 'Night engine running' },
+    { time: 42, text: 'Through the city lights' },
+    { time: 48, text: 'Scarlet in the rearview' },
+    { time: 54, text: 'Fading out of sight' },
+    { time: 62, text: '' },
+    { time: 64, text: 'We drive until the morning' },
+    { time: 70, text: 'Chase the neon signs' },
+    { time: 76, text: 'Every street a memory' },
+    { time: 82, text: 'Written between the lines' },
+  ],
+  t3: [
+    { time: 0, text: '♪ Soft piano ♪' },
+    { time: 10, text: 'In the cinder bloom' },
+    { time: 16, text: 'Where the ashes fall like rain' },
+    { time: 22, text: 'Something beautiful was born' },
+    { time: 28, text: 'From the ruins of the flame' },
+    { time: 36, text: '' },
+    { time: 38, text: 'Watch it grow, watch it glow' },
+    { time: 44, text: 'Through the smoke and pain' },
+    { time: 50, text: 'Every ember tells a story' },
+    { time: 56, text: 'Every spark contains a name' },
+  ],
+};
+
+export function getLyricsForTrack(trackId: string): LyricLine[] {
+  return trackLyrics[trackId] || [
+    { time: 0, text: '♪ Music playing ♪' },
+    { time: 15, text: 'Lyrics not yet available' },
+    { time: 30, text: 'for this track' },
+  ];
+}
